@@ -10,15 +10,18 @@ export default function Slide() {
     btn: "Подробнее",
   };
   return (
-    <div>
-      <img src={slide.image} />
-      <div>{slide.date}</div>
-      <div>{slide.name}</div>
-      <div>{slide.info}</div>
-      <div>{slide.title}</div>
-      <div>{slide.descr}</div>
-      <button>{slide.btn}</button>
-      <img src="vector.svg" />
+    <div className="flex flex-col-reverse mx-9 md:flex-row">
+      <img src={slide.image} alt="slide"/>
+      <div className="bg-white w-[600px] h-[462px]">
+        <div className="bg-darkBlue text-white pl-10 text-base">{slide.date}</div>
+        <div className="text-darkBlue pl-10 pt-[30px]">
+          <div className="text-base">{slide.name}</div>
+          <div className="text-xs  pt-[20px]">{slide.info}</div>
+          <div className="text-2xl pt-[60px] w-[400px]">{slide.title}</div>
+          <div className="text-xs pt-[30px] w-[450px]">{slide.descr}</div>
+          <button className="text-white bg-bgBtn w-[150px] h-[30px] text-sm/[14px] mt-[40px]">{slide.btn}</button>
+        </div>
+      </div>
     </div>
   );
 }

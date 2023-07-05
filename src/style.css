@@ -1,0 +1,22 @@
+body{
+    background: url('../public/bg.svg') rgba(241, 234, 224, 1) right no-repeat;
+}
+
+.slick-next {
+    top: 98%;
+    right: 33%;
+    z-index: 33;
+}
+.slick-prev{
+    top: 98%;
+    left: 33%;
+    z-index: 33;
+}
+.slick-prev::before {
+    content: url("../public/left.png")!important;
+
+}
+
+.slick-next::before {
+    content: url("../public/right.png")!important; 
+}

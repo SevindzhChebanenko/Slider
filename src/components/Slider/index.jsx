@@ -1,50 +1,68 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
+import Slide from "../Slide";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slide from "../Slide";
+
+
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{
+        ...style,
+      }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{
+        ...style,
+      }}
+      onClick={onClick}
+    />
+  );
+}
 
 export default class PreviousNextMethods extends Component {
-  constructor(props) {
-    super(props);
-    this.next = this.next.bind(this);
-    this.previous = this.previous.bind(this);
-  }
-  next() {
-    this.slider.slickNext();
-  }
-  previous() {
-    this.slider.slickPrev();
-  }
-  appendDots(dots) {
-    console.log(dots);
-    return <ul>{dots}</ul>;
-  }
   render() {
     const settings = {
-      dots: false,
+      dots: true,
       infinite: true,
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
-      appendDots: this.appendDots,
+      autoplay: true,
+      speed: 2000,
+      autoplaySpeed: 6000,
+      cssEase: "linear",
+      nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow />,
+
+      customPaging: () => (
+        <div
+          style={{
+            width: "10px",
+            height: "10px",
+            background: "rgba(186, 159, 103, 0.6)",
+            borderRadius: "50%",
+          }}
+        ></div>
+      ),
     };
     return (
-      <div className="container mx-auto">
-        <Slider ref={(c) => (this.slider = c)} {...settings}>
-          <Slide />
-          <Slide />
+      <div className="container mx-auto my-28">
+        <Slider {...settings}>
           <Slide />
           <Slide />
         </Slider>
-        <div className="mt-5">
-          <button className="button" onClick={this.previous}>
-            Previous
-          </button>
-          <button className="button" onClick={this.next}>
-            Next
-          </button>
-        </div>
       </div>
     );
   }
