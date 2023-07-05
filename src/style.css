@@ -1,17 +1,72 @@
 body{
     background: url('../public/bg.svg') rgba(241, 234, 224, 1) right no-repeat;
 }
+@media (max-width: 864px) {
+    body{
+        background-image: none;
+    }
+}
+@media (min-width: 1536px) {
+    body{
+        background-image: none;
+    }
+}
+
+
+
+.slick-dots {
+    bottom: -5%;
+    left: 15%;
+}
+@media (max-width: 1280px) {
+    .slick-dots {
+        bottom: -10%;
+    }
+}
+@media (max-width: 768px) {
+    .slick-dots {
+        left: 0;
+    }
+}
+
+
+
 
 .slick-next {
-    top: 98%;
-    right: 33%;
+    top: 97%;
+    right: 25%;
     z-index: 33;
 }
+@media (max-width: 1280px) {
+    .slick-next {
+        top: 104%;
+    }
+}
+@media (max-width: 768px) {
+    .slick-next {
+        right: 30%;
+    }
+}
+
+
+
 .slick-prev{
-    top: 98%;
-    left: 33%;
+    top: 97%;
+    left: 50%;
     z-index: 33;
 }
+@media (max-width: 1280px) {
+    .slick-prev{
+        top: 104%;
+    }
+}
+@media (max-width: 768px) {
+    .slick-prev{
+        left: 20%;
+    }
+}
+
+
 .slick-prev::before {
     content: url("../public/left.png")!important;
 

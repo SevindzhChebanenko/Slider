@@ -4,7 +4,6 @@ import Slide from "../Slide";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
@@ -39,9 +38,9 @@ export default class PreviousNextMethods extends Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
-      autoplay: true,
+      // autoplay: true,
       speed: 2000,
-      autoplaySpeed: 6000,
+      autoplaySpeed: 8000,
       cssEase: "linear",
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />,
@@ -58,7 +57,7 @@ export default class PreviousNextMethods extends Component {
       ),
     };
     return (
-      <div className="container mx-auto my-28">
+      <div className="lg:container lg:mx-auto lg:my-28">
         <Slider {...settings}>
           <Slide />
           <Slide />

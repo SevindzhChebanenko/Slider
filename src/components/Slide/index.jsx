@@ -10,16 +10,24 @@ export default function Slide() {
     btn: "Подробнее",
   };
   return (
-    <div className="flex flex-col-reverse mx-9 md:flex-row">
-      <img src={slide.image} alt="slide"/>
-      <div className="bg-white w-[600px] h-[462px]">
-        <div className="bg-darkBlue text-white pl-10 text-base">{slide.date}</div>
+    <div className="font-leksa flex flex-col-reverse mx-9 md:flex-row">
+      <div className="min-w[45%]">
+        <img src={slide.image} alt="slide" />
+      </div>
+      <div className=" bg-white min-w-[50%] lg:max-h-[462px] md:min-w-[60%]">
+        <div className="font-roboto font-light bg-darkBlue text-white py-1 pl-10 text-2xl">
+          {slide.date}
+        </div>
         <div className="text-darkBlue pl-10 pt-[30px]">
-          <div className="text-base">{slide.name}</div>
-          <div className="text-xs  pt-[20px]">{slide.info}</div>
-          <div className="text-2xl pt-[60px] w-[400px]">{slide.title}</div>
-          <div className="text-xs pt-[30px] w-[450px]">{slide.descr}</div>
-          <button className="text-white bg-bgBtn w-[150px] h-[30px] text-sm/[14px] mt-[40px]">{slide.btn}</button>
+          <div className="text-2xl">{slide.name}</div>
+          <div className="text-base font-light pt-[20px]">{slide.info}</div>
+          <div className="text-3xl pt-[60px] max-w-[400px]">{slide.title}</div>
+          <div className="font-roboto font-light text-base pt-[30px] max-w-[400px]">
+            {slide.descr}
+          </div>
+          <button className="font-roboto font-light text-white bg-bgBtn w-[150px] h-[30px] text-sm mt-[40px] mb-5">
+            {slide.btn}
+          </button>
         </div>
       </div>
     </div>

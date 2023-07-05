@@ -2,6 +2,22 @@
 module.exports = {
   content: ["./src/**/*.{html,jsx,js}"],
   theme: {
+    fontFamily: {
+      roboto: [
+        "Roboto, sans-serif",
+        {
+          fontFeatureSettings: '"cv11", "ss01"',
+          fontVariationSettings: '"opsz" 32',
+        },
+      ],
+      leksa: [
+        "LeksaSansPro, sans-serif",
+        {
+          fontFeatureSettings: '"cv11", "ss01"',
+          fontVariationSettings: '"opsz" 32',
+        },
+      ],
+    },
     extend: {
       container: {
         center: true,
