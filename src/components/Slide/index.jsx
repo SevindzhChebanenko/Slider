@@ -12,16 +12,22 @@ export default function Slide() {
   return (
     <div className="font-leksa flex flex-col-reverse mx-9 md:flex-row">
       <div className="min-w[45%]">
-        <img src={slide.image} alt="slide" />
+        <img className="w-full" src={slide.image} alt="slide" />
       </div>
-      <div className=" bg-white min-w-[50%] lg:max-h-[462px] md:min-w-[60%]">
-        <div className="font-roboto font-light bg-darkBlue text-white py-1 pl-10 text-2xl">
+      <div className=" bg-white min-w-[50%] lg:max-h-[470px]">
+        <div className="font-roboto font-light bg-darkBlue text-white  lg:pl-10 lg:static lg:text-2xl md:static md:text-2xl text-sm absolute top-[350px] px-[32px] py-[11px]">
           {slide.date}
         </div>
-        <div className="text-darkBlue pl-10 pt-[30px]">
-          <div className="text-2xl">{slide.name}</div>
-          <div className="text-base font-light pt-[20px]">{slide.info}</div>
-          <div className="text-3xl pt-[60px] max-w-[400px]">{slide.title}</div>
+        <div className="text-darkBlue lg:pl-10 pl-1 pt-[30px]">
+          <div className="lg:block flex gap-3 sm:flex sm:gap-10">
+            <div className="lg:text-2xl sm:text-base">{slide.name}</div>
+            <div className="lg:text-base font-light lg:pt-[20px] text-sm sm:text-sm sm:pt-0">
+              {slide.info}
+            </div>
+          </div>
+          <div className="lg:text-3xl lg:pt-[60px] text-2xl pt-[20px] max-w-[400px] sm:text-2xl sm:pt-[20px]">
+            {slide.title}
+          </div>
           <div className="font-roboto font-light text-base pt-[30px] max-w-[400px]">
             {slide.descr}
           </div>
